@@ -1,0 +1,15 @@
+<h1>Create a new Freewriting entry</h1>
+<p>
+  Aim for 10 - 30 minutes of stream-of-consciousness writing each day.
+  Don't edit anything that you write here!
+</p>
+
+<%= form_with model: @freewrite, local: true do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+  <%= f.label :body %>
+  <%= f.text_field :body %>
+  <%= f.submit "Save" %>
+<% end %>

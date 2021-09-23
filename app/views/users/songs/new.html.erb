@@ -1,0 +1,13 @@
+<h1>New Song</h1>
+<%= form_with model: @song, local: true do |f| %>
+  <p><%= f.label :title %></p>
+  <p><%= f.text_field :title %></p>
+
+  <p><%= f.label "What is the overall mood of this song?" %></p>
+  <p><%= f.text_field :mood %></p>
+
+  <p><%= f.label "What is this song's central message?" %></p>
+  <p><%= f.text_field :message %></p>
+
+  <%= f.submit %>
+<% end %>
