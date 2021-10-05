@@ -1,15 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
 # VIOLET, SONGWRITING COACH
 
 
@@ -35,26 +23,3 @@ Chord progressions and other information about musical motifs.
 ### Songs
 Completed songs.
 
-Immediate next steps:
-
-* Configure CORS to accept POST/PATCH/DELETE requests.
-
-* Devise implementation for authentication/authorization.
-
-* Extract Freewriting Entry functionality to it's own page, and style the homepage.
-
-* Add routes and Redux.
-
-* Add pages for completed sections and songs.
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
