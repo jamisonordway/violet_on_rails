@@ -1,7 +1,7 @@
 class Section < ApplicationRecord
   belongs_to :user
   belongs_to :song, optional: true
-  has_many :chord_progressions
+  has_one :chord_progression
 
   enum label: ['A', 'B', 'C', 'D', 'E', 'F']
 
@@ -11,5 +11,9 @@ class Section < ApplicationRecord
 
   def self.labels
     ['A', 'B', 'C', 'D', 'E', 'F']
+  end
+
+  def chords
+    chord_progression&.content
   end
 end

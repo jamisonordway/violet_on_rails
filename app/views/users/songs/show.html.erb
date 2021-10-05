@@ -10,6 +10,7 @@
 <% else %>
   <% @song.sections.each do |section| %>
     <p><%= section.section_type %> - <%= section.label %></p>
+    <p><%= section.chords %></p>
     <p><%= section.lyrics %></p>
   <% end %>
 <% end %>
