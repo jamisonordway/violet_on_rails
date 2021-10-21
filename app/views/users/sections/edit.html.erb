@@ -1,5 +1,11 @@
 <h1>Edit Song Section</h1>
 
+<% if @section.chord_progression %>
+  <%= link_to "Change chord progression", edit_chord_progression_path(@section.chord_progression) %>
+<% else %>
+  <%= link_to "Add a chord progression", new_section_chord_progression_path(@section) %>
+<% end %>
+
 <%= form_with model: @section, local: true do |f| %>
   <p>
     <%= f.label "(optional) This section is part of the song:" %>
