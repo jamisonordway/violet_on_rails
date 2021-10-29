@@ -14,6 +14,6 @@ class Section < ApplicationRecord
   end
 
   def chords
-    chord_progression&.content
+    chord_progression&.content || "no chords exist for this section yet"
   end
 end
