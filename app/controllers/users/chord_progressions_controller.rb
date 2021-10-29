@@ -18,6 +18,19 @@ class Users::ChordProgressionsController < ApplicationController
     end
   end
 
+  def edit
+    @progression = ChordProgression.find(params[:id])
+  end
+
+  def update
+    progression = ChordProgression.find(params[:id])
+    if progression.update(progression_params)
+      redirect_to section_path(progression.section.id)
+    else
+      flash[:alert] = progression.errors.full_messages
+    end
+  end
+
   private
 
   def progression_params
