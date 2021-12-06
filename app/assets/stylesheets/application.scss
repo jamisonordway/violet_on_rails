@@ -3,17 +3,21 @@
 body {
   background-color: #efe9e7;
 }
+
 .navbar {
+  border: 1.5px solid #1a090d;
+  margin-bottom: 1rem;
   padding: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
 }
 
 .nav-item {
-  border: 1px solid black;
+  border: 1.5px solid #1a090d;
   border-radius: .75rem;
   margin: .25rem;
   color: #1a090d;
   background-color: #e0e4f5;
-  box-shadow: 2px 2px 7px;
+  // box-shadow: 2px 2px 7px;
   max-height: 3rem;
 
   .nav-link {
@@ -24,5 +28,48 @@ body {
 
 .nav-current-account {
   margin: 1rem;
-  text-shadow: 1px 1px;
+  font-size: .75rem;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}
+
+.main-header {
+  text-align: center;
+  color: #1a090d;
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 5rem 0 5rem;
+
+  .resources {
+    display: flex;
+    justify-content: center;
+    border: 1.5px solid #1a090d;
+    border-radius: .75rem;
+    margin: 2rem;
+    padding: 2rem;
+    color: #1a090d;
+    background-color: #AD99A9;
+
+    a {
+      color: #1a090d;
+      margin: .25rem;
+    }
+  }
+
+  .statistics {
+    margin: 2rem;
+    padding: 2rem;
+    color: #1a090d;
+    border: 1.5px solid #1a090d;
+    border-radius: .75rem;
+    background-color: #AD99A9;
+  }
 }

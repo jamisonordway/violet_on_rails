@@ -1,15 +1,21 @@
-<h1>Welcome, <%= @user.email %>!</h1>
+<div class="dashboard">
+  <h1 class="main-header">Welcome, <%= @user.email %>!</h1>
 
-<%= link_to "My Freewrites", freewrites_path %>
-<%= link_to "My Songs", songs_path %>
-<%= link_to "My Song Sections", sections_path %>
+  <section class="resources">
+    <%= link_to "My Freewrites", freewrites_path %>
+    <%= link_to "My Songs", songs_path %>
+    <%= link_to "My Song Sections", sections_path %>
+  </section>
 
-<h3>Songwriter Statistics</h3>
-<p>
-  So far, you have made <%= @user.freewrite_total %> freewrite entries.
-  Keep up the great work!
-</p>
+  <section class="statistics">
+    <h3>Songwriter Statistics</h3>
+    <p>
+      So far, you have made <%= @user.freewrite_total %> freewrite entries.
+      Keep up the great work!
+    </p>
 
-<p>
-  You have worked on your songs for <%= @user.writing_streak %> days in a row!
-</p>
+    <p>
+      You have worked on your songs for <%= @user.writing_streak %> days in a row!
+    </p>
+  </section>
+</div>
