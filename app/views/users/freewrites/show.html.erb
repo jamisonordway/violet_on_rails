@@ -1,5 +1,7 @@
 <div class="page-theme">
   <h1><%= @freewrite.title %></h1>
-  <p><%= @freewrite.body %></p>
+  <section class="entry">
+    <p><%= @freewrite.body %></p>
+  </section>
   <p>Created: <%= @freewrite.created_at.to_formatted_s(:long) %></p>
 </div>

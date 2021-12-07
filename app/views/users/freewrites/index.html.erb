@@ -1,7 +1,10 @@
 <div class="page-theme">
   <h1>All my Freewrite Entries</h1>
   <% @freewrites.each do |freewrite| %>
-    <p><%= link_to freewrite.title, freewrite_path(freewrite) %></p>
+    <p>
+      <%= link_to freewrite.title, freewrite_path(freewrite) %> -
+      <%= freewrite.created_at.strftime('%D') %>
+    </p>
   <% end %>
 
   <p><%= link_to "Add a freewriting entry", new_freewrite_path %></p>
