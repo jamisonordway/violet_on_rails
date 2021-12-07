@@ -1,0 +1,11 @@
+<h1>New Chord Progression</h1>
+
+<%= form_with model: [@section, @chord_progression], local: true do |f| %>
+ <%= f.label :description %>
+ <%= f.text_field :description %>
+
+ <%= f.label :content %>
+ <%= f.text_field :content %>
+
+ <%= f.submit %>
+<% end %>

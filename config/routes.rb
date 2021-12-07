@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   get '/dashboard', to: 'users/users#dashboard', as: 'dashboard'
 
   scope module: :users do
-    resources :freewrites, except: [:edit, :patch]
+    resources :freewrites, except: [:edit, :update]
     resources :songs
-    resources :sections
-    resources :chord_progressions
+    resources :sections do
+      resources :chord_progressions, only: [:new, :create]
+    end
+    resources :chord_progressions, only: [:edit, :update, :destroy]
   end
 end
