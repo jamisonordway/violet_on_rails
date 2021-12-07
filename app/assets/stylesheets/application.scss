@@ -1,0 +1,93 @@
+@import "bootstrap";
+
+body {
+  background-color: #efe9e7;
+}
+
+.navbar {
+  border: 1.75px solid #1a090d;
+  margin-bottom: 1rem;
+  padding: .5rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px;
+}
+
+.nav-item {
+  border: 1.5px solid #1a090d;
+  border-radius: .75rem;
+  margin: .25rem;
+  color: #1a090d;
+  background-color: #e0e4f5;
+  max-height: 3rem;
+
+  .nav-link {
+    color: #1a090d;
+    margin: .25rem;
+  }
+}
+
+.nav-current-account {
+  margin: 1rem;
+  font-size: .75rem;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+}
+
+.main-header {
+  text-align: center;
+  color: #1a090d;
+}
+
+.page-theme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  margin: 0 5rem 0 5rem;
+  color: #1a090d;
+
+  a, a:visited {
+    color: #1a090d;
+  }
+
+  a:hover {
+    color: #AD99A9;
+  }
+
+  .resources {
+    display: flex;
+    justify-content: center;
+    border: 1.5px solid #1a090d;
+    border-radius: .75rem;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: #AD99A9;
+
+    a {
+      margin: .25rem;
+    }
+  }
+
+  .statistics {
+    margin: 2rem;
+    padding: 2rem;
+    color: #1a090d;
+    border: 1.5px solid #1a090d;
+    border-radius: .75rem;
+    background-color: #AD99A9;
+  }
+}
+
+.devise-form {
+  margin: 2rem;
+}
+
+.entry {
+  background-color: #e0e4f5;
+  border: 1.5px solid #1a090d;
+  border-radius: .75rem;
+  margin: 2rem;
+  padding: 1rem 1rem 0 1rem;
+}

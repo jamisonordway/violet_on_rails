@@ -1,16 +1,20 @@
-<h1><%= @song.title %></h1>
-<h4>Mood: <%= @song.mood %></h4>
-<h4>Message: <%= @song.message %></h4>
+<div class="page-theme">
+  <h1><%= @song.title %></h1>
+  <h4>Mood: <%= @song.mood %></h4>
+  <h4>Message: <%= @song.message %></h4>
 
-<% if !@song.sections.any? %>
-  <p>
-    To add lyrics, you'll need to
-    <%= link_to 'create a song section', new_section_path %>.
-  </p>
-<% else %>
-  <% @song.sections.each do |section| %>
-    <p><%= section.section_type %> - <%= section.label %></p>
-    <p><%= section.chords %></p>
-    <p><%= section.lyrics %></p>
-  <% end %>
-<% end %>
+  <section class="container-fluid">
+    <% if !@song.sections.any? %>
+      <p>
+        To add lyrics, you'll need to
+        <%= link_to 'create a song section', new_section_path %>.
+      </p>
+    <% else %>
+      <% @song.sections.each do |section| %>
+        <p><%= section.section_type %> - <%= section.label %></p>
+        <p><%= section.chords %></p>
+        <p><%= section.lyrics %></p>
+      <% end %>
+    <% end %>
+  </section>
+<div>

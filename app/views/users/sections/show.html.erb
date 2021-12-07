@@ -1,13 +1,14 @@
-<h1><%= @section.section_type %></h1>
-<h3><%= @section.label %></h3>
-<h3><%= @section.chords %></h3>
-<h3>Lyrics:</h3>
-<p><%= @section.lyrics %></p>
+<div class="page-theme">
+  <h1><%= @section.section_type %></h1>
+  <h3><%= @section.label %></h3>
+  <h3>Lyrics:</h3>
+  <p><%= @section.lyrics %></p>
 
-<p><%= link_to "Edit section", edit_section_path(@section) %></p>
+  <p><%= link_to "Edit section", edit_section_path(@section) %></p>
 
-<% if @section.song.present? %>
-  <p><%= link_to "See it in #{@section.song.title}", song_path(@section.song) %></p>
-<% else %>
-  <p><%= link_to "Add this section to a song", edit_section_path(@section) %></p>
-<% end %>
+  <% if @section.song.present? %>
+    <p><%= link_to "See it in #{@section.song.title}", song_path(@section.song) %></p>
+  <% else %>
+    <p><%= link_to "Add this section to a song", edit_section_path(@section) %></p>
+  <% end %>
+</div>
