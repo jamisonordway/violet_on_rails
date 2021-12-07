@@ -1,5 +1,7 @@
-<h1>All my Songs</h1>
-<p><%= link_to "New Song", new_song_path %></p>
-<% @songs.each do |song| %>
-  <p><%= link_to song.title, song_path(song) %></p>
-<% end %>
+<div class="page-theme">
+  <h1>All my Songs</h1>
+  <p><%= link_to "New Song", new_song_path %></p>
+  <% @songs.each do |song| %>
+    <p><%= link_to song.title, song_path(song) %></p>
+  <% end %>
+</div>

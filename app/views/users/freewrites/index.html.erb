@@ -1,6 +1,8 @@
-<h1>All my Freewrite Entries</h1>
-<% @freewrites.each do |freewrite| %>
-  <p><%= link_to freewrite.title, freewrite_path(freewrite) %></p>
-<% end %>
+<div class="page-theme">
+  <h1>All my Freewrite Entries</h1>
+  <% @freewrites.each do |freewrite| %>
+    <p><%= link_to freewrite.title, freewrite_path(freewrite) %></p>
+  <% end %>
 
-<p><%= link_to "Add a freewriting entry", new_freewrite_path %></p>
+  <p><%= link_to "Add a freewriting entry", new_freewrite_path %></p>
+</div>

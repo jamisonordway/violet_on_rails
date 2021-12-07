@@ -1,21 +1,23 @@
-<h1>Edit Song Section</h1>
+<div class="page-theme">
+  <h1>Edit Song Section</h1>
 
-<%= form_with model: @section, local: true do |f| %>
-  <p>
-    <%= f.label "(optional) This section is part of the song:" %>
-    <%= f.collection_select :song_id, Song.all, :id, :title %>
-  </p>
-  <p>
-    <%= f.label :label %>
-    <%= f.select :section, Section.labels %>
-  </p>
-  <p>
-    <%= f.label :section_type %>
-    <%= f.text_field :section_type %>
-  </p>
-  <p>
-    <%= f.label :lyrics %>
-    <%= f.text_field :lyrics %>
-  </p>
-  <%= f.submit %>
-<% end %>
+  <%= form_with model: @section, local: true do |f| %>
+    <p>
+      <%= f.label "(optional) This section is part of the song:" %>
+      <%= f.collection_select :song_id, Song.all, :id, :title %>
+    </p>
+    <p>
+      <%= f.label :label %>
+      <%= f.select :section, Section.labels %>
+    </p>
+    <p>
+      <%= f.label :section_type %>
+      <%= f.text_field :section_type %>
+    </p>
+    <p>
+      <%= f.label :lyrics %>
+      <%= f.text_field :lyrics %>
+    </p>
+    <%= f.submit %>
+  <% end %>
+</div>

@@ -1,12 +1,14 @@
-<h1>All my song sections</h1>
-<% @sections.each do |section| %>
-  <h4>
-    <%= link_to section.section_type, section_path(section) %>
-    <% if section.song_id %>
-      <%= "for #{section.song.title}" %>
-    <% end %>
-  </h4>
-  <p>Created at: <%= section.created_at.strftime("%m/%d/%Y") %></p>
-<% end %>
+<div class="page-theme">
+  <h1>All my song sections</h1>
+  <% @sections.each do |section| %>
+    <h4>
+      <%= link_to section.section_type, section_path(section) %>
+      <% if section.song_id %>
+        <%= "for #{section.song.title}" %>
+      <% end %>
+    </h4>
+    <p>Created at: <%= section.created_at.strftime("%m/%d/%Y") %></p>
+  <% end %>
 
-<%= link_to "Create a new section", new_section_path %>
+  <%= link_to "Create a new section", new_section_path %>
+</div>
