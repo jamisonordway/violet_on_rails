@@ -55,7 +55,7 @@ body {
   a:hover {
     color: #AD99A9;
   }
-  
+
   .dashboard-links {
     a:hover {
       color: #e0e4f5;
@@ -96,4 +96,16 @@ body {
   border-radius: .75rem;
   margin: 2rem;
   padding: 1rem 1rem 0 1rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+
+  .btn-dark {
+    justify-content: center;
+    background-color: #1a090d;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
 }
