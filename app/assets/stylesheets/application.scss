@@ -84,6 +84,23 @@ body {
     border-radius: .75rem;
     background-color: #AD99A9;
   }
+
+  .song-section-label {
+    font-weight: bold;
+  }
+
+  .song-section-content {
+    background-color: #e0e4f5;
+    border: .5px solid #1a090d;
+    border-radius: .75rem;
+    padding: 1rem;
+    margin: .5rem;
+  }
+
+  a {
+    color: #ad99a9;
+    float: right;
+  }
 }
 
 .devise-form {

@@ -11,9 +11,14 @@
       </p>
     <% else %>
       <% @song.sections.each do |section| %>
-        <p><%= section.section_type %> - <%= section.label %></p>
-        <p><%= section.chords %></p>
-        <p><%= section.lyrics %></p>
+        <section class="song-section-content">
+          <section class="song-section-label">
+            <p><%= section.section_type %> - <%= section.label %></p>
+          </section>
+          <%= link_to "Edit this section", edit_section_path(section) %>
+          <p><%= section.chords %></p>
+          <p><%= section.lyrics %></p>
+        </section>
       <% end %>
     <% end %>
   </section>
