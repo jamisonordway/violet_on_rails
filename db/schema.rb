@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_23_180334) do
+ActiveRecord::Schema.define(version: 2021_12_14_145136) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -34,6 +34,15 @@ ActiveRecord::Schema.define(version: 2021_09_23_180334) do
     t.index ["user_id"], name: "index_freewrites_on_user_id"
   end
 
+  create_table "progressions", force: :cascade do |t|
+    t.bigint "section_id"
+    t.string "description"
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["section_id"], name: "index_progressions_on_section_id"
+  end
+
   create_table "sections", force: :cascade do |t|
     t.bigint "song_id"
     t.integer "label"
@@ -42,6 +51,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_180334) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "user_id"
+    t.integer "stability"
     t.index ["song_id"], name: "index_sections_on_song_id"
     t.index ["user_id"], name: "index_sections_on_user_id"
   end
@@ -71,6 +81,7 @@ ActiveRecord::Schema.define(version: 2021_09_23_180334) do
 
   add_foreign_key "chord_progressions", "sections"
   add_foreign_key "freewrites", "users"
+  add_foreign_key "progressions", "sections"
   add_foreign_key "sections", "songs"
   add_foreign_key "sections", "users"
   add_foreign_key "songs", "users"
