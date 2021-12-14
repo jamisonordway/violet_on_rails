@@ -4,6 +4,7 @@ class Section < ApplicationRecord
   has_one :chord_progression
 
   enum label: ['A', 'B', 'C', 'D', 'E', 'F']
+  enum stability: ['Very Balanced', 'Balanced', 'Unbalanced', 'Very Unbalanced']
 
   def self.sections_for_user(user)
     joins(:song).where("songs.user_id = ?", user.id)
@@ -11,6 +12,10 @@ class Section < ApplicationRecord
 
   def self.labels
     ['A', 'B', 'C', 'D', 'E', 'F']
+  end
+
+  def self.stability_levels
+    ['Very Balanced', 'Balanced', 'Unbalanced', 'Very Unbalanced']
   end
 
   def chords

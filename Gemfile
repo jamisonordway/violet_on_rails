@@ -23,6 +23,8 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'has_streak'
 gem 'bootstrap'
+gem 'syllabize'
+gem 'numbers_and_words'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -48,6 +48,7 @@ class Users::SectionsController < Users::UsersController
       :label,
       :section_type,
       :lyrics,
+      :stability,
       :created_at,
       :updated_at
     )
