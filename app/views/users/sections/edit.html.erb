@@ -18,6 +18,10 @@
       <%= f.label :lyrics %>
       <%= f.text_field :lyrics %>
     </p>
+    <p>
+      <%= f.label "How stable is this section?" %>
+      <%= f.select :stability, Section.stability_levels %>
+    </p>
     <%= f.submit %>
   <% end %>
 </div>

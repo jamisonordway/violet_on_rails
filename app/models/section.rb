@@ -14,6 +14,10 @@ class Section < ApplicationRecord
     ['A', 'B', 'C', 'D', 'E', 'F']
   end
 
+  def self.stability_levels
+    ['Very Balanced', 'Balanced', 'Unbalanced', 'Very Unbalanced']
+  end
+
   def chords
     chord_progression&.content || "no chords exist for this section yet"
   end
