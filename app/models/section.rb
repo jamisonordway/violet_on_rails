@@ -7,14 +7,18 @@ class Section < ApplicationRecord
   enum stability: ['Very Balanced', 'Balanced', 'Unbalanced', 'Very Unbalanced']
 
   def self.sections_for_user(user)
+    # TODO: Remove this method,
+    # as sections can now be associated with a user directly
     joins(:song).where("songs.user_id = ?", user.id)
   end
 
   def self.labels
+    # TODO: can this be removed since we have the enum?
     ['A', 'B', 'C', 'D', 'E', 'F']
   end
 
   def self.stability_levels
+    # TODO: can this be removed since we have the enum?
     ['Very Balanced', 'Balanced', 'Unbalanced', 'Very Unbalanced']
   end
 
