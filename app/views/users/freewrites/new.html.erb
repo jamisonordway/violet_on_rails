@@ -5,6 +5,10 @@
     Don't edit anything that you write here!
   </p>
 
+  <%= best_in_place @freewrite, :title, :as => :input %>
+
+  <%= best_in_place @freewrite, :description, :as => :input, :place_holder => "Click me to add content!" %>
+
   <%= form_with model: @freewrite, local: true, class: 'form-control' do |f| %>
     <div class="form-group">
       <%= f.label :title %>
