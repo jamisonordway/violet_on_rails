@@ -27,4 +27,8 @@ class LyricLine < ApplicationRecord
       return 'Very Balanced'
     end
   end
+
+  def self.recently_created
+    order(created_at: :desc)
+  end
 end

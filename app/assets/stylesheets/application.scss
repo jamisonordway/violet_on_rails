@@ -126,3 +126,24 @@ body {
     margin-bottom: 1rem;
   }
 }
+
+.stability-Balanced {
+  background-color: #B4E6F8;
+  a {
+    color: black;
+  }
+}
+
+.stability-Unbalanced {
+  background-color: #FB9A4B;
+  a {
+    color: black;
+  }
+}
+
+.stability-None {
+  background-color: #C9C9CF;
+  a {
+    color: black;
+  }
+}
