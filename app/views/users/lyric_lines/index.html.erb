@@ -1,0 +1,8 @@
+<h1>All my standalone Lyrics</h1>
+
+<% @lyrics.each do |lyric| %>
+  <p>
+    <%= link_to lyric.content, lyric_path(lyric) %>
+    <%= lyric.created_at.strftime('%D') %>
+  </p>
+<% end %>

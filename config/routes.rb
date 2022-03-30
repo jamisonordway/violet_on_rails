@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   scope module: :users do
     resources :freewrites, except: [:edit, :update]
+    resources :lyrics, only: [:index, :show], controller: 'lyric_lines'
     resources :songs
     resources :sections do
       resources :chord_progressions, only: [:new, :create]
