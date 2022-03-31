@@ -4,6 +4,10 @@ class Users::LyricLinesController < ApplicationController
     @lyrics = LyricLine.recently_created
   end
 
+  def show
+    @lyric = LyricLine.find(params[:id])
+  end
+
   def new
     @existing = LyricLine.all
     @lyric_line = LyricLine.new
