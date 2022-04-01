@@ -1,6 +1,6 @@
 <div class="page-theme">
   <h1>All my standalone Lyrics</h1>
-
+  <p><%= link_to "Add lyrics to a Song Section", '/lyrics/assign' %></p>
   <% @lyrics.each do |lyric| %>
     <p class="stability-<%= lyric.stability %>">
       <%= link_to lyric.content, lyric_line_path(lyric) %>

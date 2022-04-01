@@ -39,6 +39,15 @@ class Users::SectionsController < Users::UsersController
     section.destroy
   end
 
+  def assign_lyrics
+    @lyrics = LyricLine.all
+  end
+
+  def add_lyrics
+    section = Section.find(params[:section_id])
+    binding.pry
+  end
+
   private
 
   def section_params

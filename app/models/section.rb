@@ -25,4 +25,16 @@ class Section < ApplicationRecord
   def chords
     chord_progression&.content || "no chords exist for this section yet"
   end
+
+  def song_title
+    if song.present?
+      song.title
+    else
+      'N/A'
+    end
+  end
+
+  def select_text
+    "#{section_type} for #{song_title}"
+  end
 end
