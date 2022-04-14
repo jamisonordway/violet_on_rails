@@ -31,4 +31,8 @@ class LyricLine < ApplicationRecord
   def self.recently_created
     order(created_at: :desc)
   end
+
+  def label
+    "#{stability || stability_estimate}: #{content[0..24]}..."
+  end
 end

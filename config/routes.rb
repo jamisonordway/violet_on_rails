@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   scope module: :users do
     resources :freewrites, except: [:edit, :update]
+    get '/lyrics/assign', to: 'sections#assign_lyrics'
+    patch '/update_lyrics', to: 'sections#add_lyrics'
     resources :lyrics, except: :delete, controller: 'lyric_lines', as: 'lyric_lines'
     resources :songs
     resources :sections do

@@ -1,0 +1,11 @@
+<div class="page-theme">
+  <h1>Add lyrics to an existing song section</h1>
+
+  <%= form_with url: '/update_lyrics', method: :patch, local: true do |f| %>
+    <%= f.select :section_id, Section.all.collect { |s| [s.select_text, s.id] } %>
+    <%= collection_check_boxes(:lyric, :lines, LyricLine.all, :id, :label) do |option| %>
+      <p><%= option.label { option.label } %> <%= option.check_box %></p>
+    <% end %>
+    <%= f.submit 'Save' %>
+  <% end %>
+</div>
