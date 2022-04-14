@@ -45,7 +45,15 @@ class Users::SectionsController < Users::UsersController
 
   def add_lyrics
     section = Section.find(params[:section_id])
-    binding.pry
+    added_lyrics = params[:lyric][:lines].map do |line|
+      if line.present?
+        found_lyric = LyricLine.find(line)
+        if found_lyric
+          found_lyric.update(section: section)
+        end
+      end
+    end
+    redirect_to section_path(section)
   end
 
   private

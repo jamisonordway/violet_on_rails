@@ -3,12 +3,8 @@
 
   <%= form_with url: '/update_lyrics', method: :patch, local: true do |f| %>
     <%= f.select :section_id, Section.all.collect { |s| [s.select_text, s.id] } %>
-    <% @lyrics.each do |lyric| %>
-      <p class="stability-<%= lyric.stability %>">
-        <%= lyric.content %>
-        <%= lyric.created_at.strftime('%D') %>
-        <%= check_box_tag "lyric-#{lyric.id}", lyric.id, false, id: "lyric-id"  %>
-      </p>
+    <%= collection_check_boxes(:lyric, :lines, LyricLine.all, :id, :label) do |option| %>
+      <p><%= option.label { option.label } %> <%= option.check_box %></p>
     <% end %>
     <%= f.submit 'Save' %>
   <% end %>
